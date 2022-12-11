@@ -10,7 +10,7 @@ Animal wars is a pvp turn-based game that the game will randomly give the player
 - player stats save/load management.
 
 ## Requirement
-- Python version 3.60 or later
+- Python version 3.10 or later
 - PlayerDB.json file
 - random Module
 
