@@ -7,6 +7,7 @@ class DB:
             self.player_dict = json.load(player_file)
 
     def create_db(self, player_name):
+        """this function will create the data to PlayerDB.json"""
         while True:
             if player_name in self.player_dict:
                 print('Sorry, the name was taken')
@@ -28,6 +29,7 @@ class DB:
                 return player_name
 
     def load_db(self, player_name):
+        """this function will check that the name is in the database or not"""
         if player_name in self.player_dict:
             print(f'Welcome back {player_name}!')
             print('================================')
@@ -40,11 +42,13 @@ class DB:
             return False
 
     def update_db(self, player):
+        """update data to database"""
         self.player_dict[player.name] = player.stats
         with open('PlayerDB.json', "w") as player_file:
             json.dump(self.player_dict, player_file, indent=4)
 
     def show_db(self, player_name):
+        """show the data of the player"""
         print(f'{player_name} stats')
         print(f'win: {self.player_dict[player_name]["win"]}', end=' ')
         print(f'lose: {self.player_dict[player_name]["lose"]}', end=' ')

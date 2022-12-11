@@ -3,6 +3,7 @@ from DB import DB
 
 
 def random_damage(atk):
+    """random the damage"""
     damage_multiply = [0, 0.6, 1, 1.2]
     popularity = [2, 42, 50, 6]
     multiply = random.choices(damage_multiply, popularity)
@@ -18,6 +19,7 @@ def random_damage(atk):
 
 
 def update_hp(p, damage):
+    """update the player's hp"""
     if p.status['hp'] > damage:
         p.status['hp'] -= damage
     else:
@@ -29,6 +31,7 @@ def next_round(p1_hp, p2_hp):
 
 
 def show_info(p1, p2):
+    """show the status of each player"""
     print('*' * 64)
     print(f'{p1.name}: {p1.role}')
     print(f'{p2.name}: {p2.role}')
@@ -63,6 +66,7 @@ def show_info(p1, p2):
 
 
 def play(p1, p2):
+    """actions phase of the player"""
     print(f"{p1.name}'s turn")
     while True:
         print(f'{"Please select actions":^64}')
@@ -106,6 +110,7 @@ def play(p1, p2):
 
 
 def cal_win_rate(player):
+    """calculate the win rate"""
     if player.stats['win'] == 0:
         return 0
     else:
@@ -114,6 +119,7 @@ def cal_win_rate(player):
 
 
 def decide_winner(p1, p2):
+    """decide who is the winner"""
     if p1.status['hp'] <= 0:
         p1.stats['lose'] += 1
         p2.stats['win'] += 1
@@ -132,6 +138,7 @@ def decide_winner(p1, p2):
 
 
 def battle(p1, p2):
+    """show info, decide who will play first, and let the players fight"""
     while True:
         show_info(p1, p2)
         if next_round(p1.status['hp'], p2.status['hp']):

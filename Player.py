@@ -14,6 +14,7 @@ class Player:
             self.stats = json.load(player_file)[self.name]
 
     def attack(self, opponent):
+        """attack the opponent"""
         print(f'{self.name} attacks {opponent.name} with basic attack')
         damage = random_damage(self.status['atk'])
         update_hp(opponent, damage)
@@ -21,6 +22,7 @@ class Player:
         self.status['energy'] += 10
 
     def special_move(self, opponent, skill):
+        """effect of every skill"""
         print(f'{self.name} use {skill["name"]}!!!')
         if skill["name"] == 'Double attack':
             damage = random_damage(2*self.status['atk'])

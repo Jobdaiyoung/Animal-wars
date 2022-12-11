@@ -5,6 +5,7 @@ from Role import *
 
 
 def setup_name():
+    """set up the name of the player"""
     while True:
         print(f'{"(1) New Player         (2) Load Player"}')
         choice = input('Enter number: ')
