@@ -3,7 +3,7 @@ from Setup import *
 
 
 def main():
-    print('Animal War')
+    print('Animal Wars')
     p1, p2 = setup_player()
     battle(p1, p2)
     decide_winner(p1, p2)

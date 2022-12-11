@@ -3,13 +3,13 @@
 ## Overview
 Animal wars is a pvp turn-based game
 
-## Requirement
-- Python version 3.10 or later
-- PlayerDB.json file
-- random Module
+## Features
+- turn-based 2 player pvp game that each player will fight each others.
+- the player can use skills to fight each others.
+- player stats save/load management.
 
 ## Requirement
-- Python version 3.10 or later
+- Python version 3.60 or later
 - PlayerDB.json file
 - random Module
 
@@ -27,3 +27,19 @@ these classes are the roles in the game and contain the status of the player whi
 this class will create and update the player stats to the PlayerDB.json file and also load stats from it too.
 - #### Player in Player.py
 this class contains detail of the player such as name, and stats and also generate the action of the player.
+
+## Code structure
+- #### main.py
+main file that will run the program by using every function and class to work together.
+- #### Player.py
+contains class Player
+- #### DB.py
+contains class DB
+- #### Role.py
+contains class Dog,Cat,Turtle
+- #### Setup.py
+contains functions that is used to create a Player
+- #### game_function.py
+contains functions that is used in battle phase of the game
+- #### PlayerDB.json
+contains all of player's stats which are wins, loses, and win rate
