@@ -44,3 +44,5 @@ contains functions that is used to create a Player
 contains functions that is used in battle phase of the game
 - #### PlayerDB.json
 contains all of player's stats which are wins, loses, and win rate
+
+github URL https://github.com/Jobdaiyoung/Animal-wars.git
