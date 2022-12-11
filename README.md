@@ -1,7 +1,8 @@
 # ANIMAL WARS
 
 ## Overview
-Animal wars is a pvp turn-based game
+Animal wars is a pvp turn-based game that the game will randomly give the player a different role with different skills to fight each other.Who runs out of hp first will lose. 
+
 
 ## Features
 - turn-based 2 player pvp game that each player will fight each others.
