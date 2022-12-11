@@ -84,12 +84,12 @@ def play(p1, p2):
                     print(f'1) {p1.skills["skill"]["name"]}')
                     print(f'2) {p1.skills["ult"]["name"]}')
                     print('=' * 64)
-                    skill = int(input('Please select skill: '))
-                    if skill == 1:
+                    skill = input('Please select skill: ')
+                    if skill == "1":
                         p1.special_move(p2, p1.skills["skill"])
                         print('=' * 64)
                         break
-                    elif skill == 2:
+                    elif skill == "2":
                         if p1.status['energy'] >= p1.skills["ult"]['cost']:
                             p1.special_move(p2, p1.skills["ult"])
                             print('=' * 64)
